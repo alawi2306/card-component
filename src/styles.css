@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300&family=Quicksand&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.App {
+    height: 150vh;
+}
+
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 0;
+}
+
+:root {
+    --bg-color: rgb(20, 20, 20);
+    --card-color: rgb(23, 23, 23);
+  }
+
+  body {
+    background-color: var(--bg-color);
+    height: 100vh;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
+    align-items: center;     /* Center children horizontally */
+    justify-content: center; /* Center the whole content vertically */
+    min-height: 80vh;       /* At least full screen, can grow taller if content overflows */
+    position: relative;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;  
+    max-width: 1200px;
+    width: calc(100% - 20px);
+    height: 20vh;
+
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    position: relative;
+    width: 350px; 
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+    text-align: center;
+  }
+
+.card::before {
+    content: "";
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(255, 255, 255, 0.30),
+    transparent 40%
+  );
+    z-index: 3;
+    position: absolute;
+}
+  
+.desc {
+    color: rgba(240, 248, 255, 0.416);
+}
+
+.image {
+    width: 50px;
+    length: 40px;
+}
+
+.title {
+  margin: 20px;
+  color: rgba(255, 255, 255, 0.682);
+
+}
+
+.head {
+    position: absolute;
+    top: 0;
+    align-items: center;
+    margin: 0;
+    height: 34%;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: aliceblue;
+}
+
